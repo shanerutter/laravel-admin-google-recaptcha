@@ -1,0 +1,35 @@
+{
+    "name": "shanerutter/laravel-admin-google-recaptcha",
+    "description": "Add google captcha and login attempts to laravel-admin",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension"],
+    "homepage": "https://github.com/shanerutter/auth-attempts",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Shane Rutter",
+            "email": "shane@shanerutter.co.uk"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "encore/laravel-admin": "~1.6",
+        "google/recaptcha": "^1.2"
+    },
+    "require-dev": {
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Shanerutter\\LaravelAdminGoogleRecaptcha\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Shanerutter\\LaravelAdminGoogleRecaptcha\\AuthAttemptsServiceProvider"
+            ]
+
+        }
+    }
+}
