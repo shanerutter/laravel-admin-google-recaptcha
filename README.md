@@ -1,6 +1,6 @@
-Google Recaptcha and Login attempts for laravel-admin
+Google Recaptcha v3 and Login attempts for laravel-admin
 ======
-Add google recaptcha and login attempts to laravel-admin
+Add google recaptcha v3 and login attempts to laravel-admin
 
 
 ### Installation
@@ -14,7 +14,7 @@ composer require shanerutter/laravel-admin-google-recaptcha
 In the extensions section of the `config/admin.php` file, add configurations
 ```
 'extensions' => [
-    \Shanerutter\LaravelAdminGoogleRecaptcha\AuthGoogleRecaptcha::$group => [
+    'auth-google-recaptcha' => [
         'enable' => (bool)env('ADMIN_RECAPTCHA_ENABLED', true),
         'maxAttempts' => 5,
         'decayMinutes' => 5,
