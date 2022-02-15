@@ -50,14 +50,14 @@ class AuthController extends BaseAuthController
 
         unset($credentials['recaptcha-token']);
 
-        if ($this->guard()->attempt($credentials)) {
-            return $this->sendLoginResponse($request);
-        }
-
         if ($this->hasTooManyLoginAttempts($request)) {
             $this->fireLockoutEvent($request);
 
             return $this->sendLockoutResponse($request);
+        }
+
+        if ($this->guard()->attempt($credentials)) {
+            return $this->sendLoginResponse($request);
         }
 
         $this->incrementLoginAttempts($request);
