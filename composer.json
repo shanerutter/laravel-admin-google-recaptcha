@@ -3,7 +3,7 @@
     "description": "Add google captcha and login attempts to laravel-admin",
     "type": "library",
     "keywords": ["laravel-admin", "extension"],
-    "homepage": "https://github.com/shanerutter/auth-attempts",
+    "homepage": "https://github.com/shanerutter/laravel-admin-google-recaptcha",
     "license": "MIT",
     "authors": [
         {
